@@ -11,6 +11,7 @@
 		A0B1FFC72737D1DD008F92D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1FFC62737D1DD008F92D1 /* ContentView.swift */; };
 		A0B1FFC92737D1DE008F92D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B1FFC82737D1DE008F92D1 /* Assets.xcassets */; };
 		A0B1FFCC2737D1DE008F92D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B1FFCB2737D1DE008F92D1 /* Preview Assets.xcassets */; };
+		A0B1FFD32737D1FB008F92D1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1FFD22737D1FB008F92D1 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		A0B1FFC62737D1DD008F92D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0B1FFC82737D1DE008F92D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0B1FFCB2737D1DE008F92D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0B1FFD22737D1FB008F92D1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				A0B1FFC42737D1DD008F92D1 /* ClassStructureWrappersApp.swift */,
 				A0B1FFC62737D1DD008F92D1 /* ContentView.swift */,
+				A0B1FFD22737D1FB008F92D1 /* Model.swift */,
 				A0B1FFC82737D1DE008F92D1 /* Assets.xcassets */,
 				A0B1FFCA2737D1DE008F92D1 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0B1FFD32737D1FB008F92D1 /* Model.swift in Sources */,
 				A0B1FFC72737D1DD008F92D1 /* ContentView.swift in Sources */,
 				A0B1FFC52737D1DD008F92D1 /* ClassStructureWrappersApp.swift in Sources */,
 			);
