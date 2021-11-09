@@ -7,7 +7,7 @@
 
 import Foundation
 // **********************************************
-class userA {
+class UserA {
     var name = "userA0"
     var isHuman = false
     var age = 34
@@ -17,7 +17,7 @@ class userA {
     }
 }
 // **********************************************
-class userB {
+class UserB {
     var name: String
     var isHuman: Bool
     var age: Int
@@ -33,7 +33,7 @@ class userB {
     }
 }
 // **********************************************
-struct userC {
+struct UserC {
     var name = "userC0"
     var isHuman = false
     var age = 23
@@ -43,7 +43,7 @@ struct userC {
     }
 }
 // **********************************************
-struct userD {
+struct UserD {
     var name: String
     var isHuman: Bool
     var age: Int
@@ -53,16 +53,16 @@ struct userD {
     }
 }
 // **********************************************
-class userE {
-    var user = userC()
+class UserE {
+    var user = UserC()
     
     var lentValidation: Bool {
         user.nameLenth < 5
     }
 }
 // **********************************************
-class userF {
-    var user = userD(name: "userF0", isHuman: false, age: 45)
+class UserF {
+    var user = UserD(name: "userF0", isHuman: false, age: 45)
     
     var lentValidation: Bool {
         user.nameLenth < 5

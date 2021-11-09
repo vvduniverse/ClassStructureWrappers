@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserCSecondView: View {
     
-    var user = userC()
+    @State private var user = UserC()
     
     @State private var name = ""
     @State private var age = ""
@@ -22,7 +22,7 @@ struct UserCSecondView: View {
                 Text("Enter you name, plz.")
                 TextField("\(user.name)", text: $name)
                 Button("Done") {
-//                    user.name = name
+                    user.name = name
                     name = ""
                 }
             }
@@ -31,10 +31,10 @@ struct UserCSecondView: View {
                 TextField("\(user.age)", text: $age)
                 Button("Done") {
                     if Int(age) != nil  {
-//                        user.age = Int(age)!
+                        user.age = Int(age)!
                         age = ""
                     } else {
-//                        user.age = 0
+                        user.age = 0
                         age = ""
                     }
                 }

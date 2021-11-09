@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserBSecondView: View {
     
-    let user = userB(name: "UserB2", isHuman: true, age: 55)
+    let user = UserB(name: "UserB2", isHuman: true, age: 55)
     
     @State private var name = ""
     @State private var age = ""

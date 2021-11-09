@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserBView: View {
     
-    let user = userB(name: "UserB", isHuman: true, age: 44)
+    let user = UserB(name: "UserB", isHuman: true, age: 44)
     
     var body: some View {
         VStack {

@@ -9,12 +9,12 @@ import SwiftUI
 
 struct UsersUIView: View {
     
-    let user1 = userA()
-    let user2 = userB(name: "UserB", isHuman: true, age: 29)
-    let user3 = userC()
-    let user4 = userD(name: "UserD", isHuman: true, age: 55)
-    let user5 = userE()
-    let user6 = userF()
+    let user1 = UserA()
+    let user2 = UserB(name: "UserB", isHuman: true, age: 29)
+    let user3 = UserC()
+    let user4 = UserD(name: "UserD", isHuman: true, age: 55)
+    let user5 = UserE()
+    let user6 = UserF()
     
     var body: some View { 
         VStack{
