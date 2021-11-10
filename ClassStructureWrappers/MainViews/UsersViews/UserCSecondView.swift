@@ -10,6 +10,7 @@ import SwiftUI
 struct UserCSecondView: View {
     
     @State private var user = UserC()
+//    @Published var user = UserC()
     
     @State private var name = ""
     @State private var age = ""

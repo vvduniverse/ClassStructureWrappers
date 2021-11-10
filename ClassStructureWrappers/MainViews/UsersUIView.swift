@@ -16,41 +16,33 @@ struct UsersUIView: View {
     let user5 = UserE()
     let user6 = UserF()
     
-    var body: some View { 
-        VStack{
-            Group {
-                Spacer()
-                HStack {
-                    Text("User name is \(user1.name) has lenth  \(user1.nameLenth)")
-                    Text(user1.isHuman ? "Is human" : "Not a human")
-                }
-                Spacer()
-                HStack {
-                    Text("User name is \(user2.name) has lenth  \(user2.nameLenth)")
-                    Text(user2.isHuman ? "Is human2" : "Not a human")
-                }
-                Spacer()
-                HStack {
-                    Text("User name is \(user3.name) has lenth  \(user3.nameLenth)")
-                    Text(user3.isHuman ? "Is human" : "Not a human")
-                }
-                Spacer()
-                HStack {
-                    Text("User name is \(user4.name) has lenth  \(user4.nameLenth)")
-                    Text(user4.isHuman ? "Is human" : "Not a human")
-                }
-                Spacer()
-                HStack {
-                    Text("User name is \(user5.user.name) has lenth  \(user5.user.nameLenth)")
-                    Text(user5.user.isHuman ? "Is human" : "Not a human")
-                }
+    var body: some View {
+        VStack(spacing: 45) {
+            
+            HStack {
+                Text("User name is \(user1.name) has lenth  \(user1.nameLenth)")
+                Text(user1.isHuman ? "Is human" : "Not a human")
             }
-            Spacer()
+            HStack {
+                Text("User name is \(user2.name) has lenth  \(user2.nameLenth)")
+                Text(user2.isHuman ? "Is human2" : "Not a human")
+            }
+            HStack {
+                Text("User name is \(user3.name) has lenth  \(user3.nameLenth)")
+                Text(user3.isHuman ? "Is human" : "Not a human")
+            }
+            HStack {
+                Text("User name is \(user4.name) has lenth  \(user4.nameLenth)")
+                Text(user4.isHuman ? "Is human" : "Not a human")
+            }
+            HStack {
+                Text("User name is \(user5.user.name) has lenth  \(user5.user.nameLenth)")
+                Text(user5.user.isHuman ? "Is human" : "Not a human")
+            }
             HStack {
                 Text("User name is \(user6.user.name) has lenth  \(user6.user.nameLenth)")
                 Text(user6.user.isHuman ? "Is human" : "Not a human")
             }
-            Spacer()
         }
     }
 }

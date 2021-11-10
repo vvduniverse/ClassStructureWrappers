@@ -13,6 +13,7 @@
 		A07F119C273975FB009FAD59 /* UserDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F119B273975FB009FAD59 /* UserDView.swift */; };
 		A07F119E27397608009FAD59 /* UserEView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F119D27397607009FAD59 /* UserEView.swift */; };
 		A07F11A027397618009FAD59 /* UserFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07F119F27397618009FAD59 /* UserFView.swift */; };
+		A0815BD9273BC0EC00DE9B81 /* UserAThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0815BD8273BC0EC00DE9B81 /* UserAThirdView.swift */; };
 		A09FF87F273A9753003ED9FB /* UserASecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FF87E273A9753003ED9FB /* UserASecondView.swift */; };
 		A09FF881273A9967003ED9FB /* UserBSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FF880273A9967003ED9FB /* UserBSecondView.swift */; };
 		A09FF883273A9972003ED9FB /* UserCSecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09FF882273A9972003ED9FB /* UserCSecondView.swift */; };
@@ -34,6 +35,7 @@
 		A07F119B273975FB009FAD59 /* UserDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDView.swift; sourceTree = "<group>"; };
 		A07F119D27397607009FAD59 /* UserEView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEView.swift; sourceTree = "<group>"; };
 		A07F119F27397618009FAD59 /* UserFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFView.swift; sourceTree = "<group>"; };
+		A0815BD8273BC0EC00DE9B81 /* UserAThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAThirdView.swift; sourceTree = "<group>"; };
 		A09FF87E273A9753003ED9FB /* UserASecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserASecondView.swift; sourceTree = "<group>"; };
 		A09FF880273A9967003ED9FB /* UserBSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBSecondView.swift; sourceTree = "<group>"; };
 		A09FF882273A9972003ED9FB /* UserCSecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCSecondView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 			children = (
 				A07F119527397558009FAD59 /* UserAView.swift */,
 				A09FF87E273A9753003ED9FB /* UserASecondView.swift */,
+				A0815BD8273BC0EC00DE9B81 /* UserAThirdView.swift */,
 				A07F119727397577009FAD59 /* UserBView.swift */,
 				A09FF880273A9967003ED9FB /* UserBSecondView.swift */,
 				A09FF882273A9972003ED9FB /* UserCSecondView.swift */,
@@ -200,6 +203,7 @@
 				A07F11A027397618009FAD59 /* UserFView.swift in Sources */,
 				A09FF883273A9972003ED9FB /* UserCSecondView.swift in Sources */,
 				A0B1FFC72737D1DD008F92D1 /* ContentView.swift in Sources */,
+				A0815BD9273BC0EC00DE9B81 /* UserAThirdView.swift in Sources */,
 				A09FF881273A9967003ED9FB /* UserBSecondView.swift in Sources */,
 				A09FF87F273A9753003ED9FB /* UserASecondView.swift in Sources */,
 				A07F119E27397608009FAD59 /* UserEView.swift in Sources */,

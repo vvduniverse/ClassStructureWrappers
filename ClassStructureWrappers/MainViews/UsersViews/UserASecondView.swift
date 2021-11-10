@@ -13,6 +13,7 @@ struct UserASecondView: View {
     
     @State private var name = ""
     @State private var age = ""
+    @State private var nextViewIsPresented = false
     
     var body: some View {
         VStack {
@@ -38,6 +39,13 @@ struct UserASecondView: View {
                         age = ""
                     }
                 }
+            }
+            Divider()
+            Button("NEXT") {
+                nextViewIsPresented = true
+            }
+            .sheet(isPresented: $nextViewIsPresented) {
+                UserAThirdView(nextViewIsPresented: $nextViewIsPresented)
             }
         }.padding()
 
