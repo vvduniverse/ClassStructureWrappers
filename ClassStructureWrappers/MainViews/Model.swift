@@ -7,20 +7,21 @@
 
 import Foundation
 // **********************************************
-class UserA {
-    var name = "userA0"
-    var isHuman = false
-    var age = 34
+class UserA: ObservableObject {
     
-    var nameLenth: Int {
-        name.count
-    }
+    @Published var name = "userA0"
+    @Published var isHuman = false
+    @Published var age = 34
+    
+//    var nameLenth: Int {
+//        name.count
+//    }
 }
 // **********************************************
-class UserB {
-    var name: String
-    var isHuman: Bool
-    var age: Int
+class UserB: ObservableObject {
+    @Published var name: String
+    @Published var isHuman: Bool
+    @Published var age: Int
     
     var nameLenth: Int {
         name.count

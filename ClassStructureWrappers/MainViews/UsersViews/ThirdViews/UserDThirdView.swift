@@ -20,8 +20,9 @@ struct UserDThirdView: View {
                 Button("Done") {
                     nextViewIsPresented.toggle()
                 }
+                .foregroundColor(.white)
             }
-            .padding(/*@START_MENU_TOKEN@*/[.top, .trailing]/*@END_MENU_TOKEN@*/)       
+            .padding(/*@START_MENU_TOKEN@*/[.top, .trailing]/*@END_MENU_TOKEN@*/)
             Spacer()
             Text(" A-line ")
             Divider()

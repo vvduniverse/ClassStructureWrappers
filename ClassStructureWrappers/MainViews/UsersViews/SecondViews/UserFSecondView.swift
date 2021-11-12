@@ -19,12 +19,14 @@ struct UserFSecondView: View {
         VStack {
             Text(" F-line ")
             Divider()
+            Text("Name: \(user.user.name), age: \(user.user.age)")
+            Divider()
             HStack {
                 Text("Enter you name, plz.")
                 TextField("\(user.user.name)", text: $name)
                 Button("Done") {
                     user.user.name = name
-                    name = ""
+//                    name = ""
                 }
             }
             HStack {
@@ -33,10 +35,10 @@ struct UserFSecondView: View {
                 Button("Done") {
                     if Int(age) != nil  {
                         user.user.age = Int(age)!
-                        age = ""
+//                        age = ""
                     } else {
                         user.user.age = 0
-                        age = ""
+//                        age = ""
                     }
                 }
             }

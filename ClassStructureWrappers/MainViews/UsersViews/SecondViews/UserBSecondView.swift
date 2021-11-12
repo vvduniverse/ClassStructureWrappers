@@ -9,7 +9,8 @@ import SwiftUI
 
 struct UserBSecondView: View {
     
-    let user = UserB(name: "UserB2", isHuman: true, age: 55)
+    //    let user = UserB(name: "UserB2", isHuman: true, age: 55)
+    @EnvironmentObject var user: UserB
     
     @State private var name = ""
     @State private var age = ""
@@ -17,7 +18,9 @@ struct UserBSecondView: View {
     
     var body: some View {
         VStack {
-            Text(" B-line ")
+            Text(" B-line Page 2")
+            Divider()
+            Text("Name: \(user.name), age: \(user.age)")
             Divider()
             HStack {
                 Text("Enter you name, plz.")

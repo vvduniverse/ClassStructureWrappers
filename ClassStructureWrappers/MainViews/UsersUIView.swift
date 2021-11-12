@@ -9,10 +9,14 @@ import SwiftUI
 
 struct UsersUIView: View {
     
-    let user1 = UserA()
-    let user2 = UserB(name: "UserB", isHuman: true, age: 29)
+    @ObservedObject var user: UserA
+//    let user1 = UserA()
+    
+//    let user2 = UserB(name: "UserB0", isHuman: true, age: 29)
+    @EnvironmentObject var user2: UserB
+    
     let user3 = UserC()
-    let user4 = UserD(name: "UserD", isHuman: true, age: 55)
+    let user4 = UserD(name: "UserD0", isHuman: true, age: 55)
     let user5 = UserE()
     let user6 = UserF()
     
@@ -20,11 +24,11 @@ struct UsersUIView: View {
         VStack(spacing: 45) {
             
             HStack {
-                Text("User name is \(user1.name) has lenth  \(user1.nameLenth)")
-                Text(user1.isHuman ? "Is human" : "Not a human")
+                Text("User name is \(user.name) has lenth  \(user.age)")
+                Text(user.isHuman ? "Is human" : "Not a human")
             }
             HStack {
-                Text("User name is \(user2.name) has lenth  \(user2.nameLenth)")
+                Text("User name is \(user2.name) has lenth  \(user2.age)")
                 Text(user2.isHuman ? "Is human2" : "Not a human")
             }
             HStack {
@@ -49,6 +53,6 @@ struct UsersUIView: View {
 
 struct UsersUIView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersUIView()
+        UsersUIView(user: UserA())
     }
 }

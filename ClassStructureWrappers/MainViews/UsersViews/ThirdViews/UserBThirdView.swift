@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserBThirdView: View {
+    
+    @EnvironmentObject var user: UserB
+    
     @Binding var nextViewIsPresented: Bool
     
     @Binding var name: String
@@ -23,7 +26,9 @@ struct UserBThirdView: View {
             }
             .padding(/*@START_MENU_TOKEN@*/[.top, .trailing]/*@END_MENU_TOKEN@*/)       
             Spacer()
-            Text(" A-line ")
+            Text(" B-line Page 3")
+            Divider()
+            Text("Class user is: \(user.name) and age is: \(user.age)")
             Divider()
             Text("User is: \(name) and age is: \(age)")
             Spacer()

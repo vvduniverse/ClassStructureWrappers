@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct ClassStructureWrappersApp: App {
+    
+    @StateObject private var user = UserB(name: "UserB0", isHuman: true, age: 29)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(user)
         }
     }
 }

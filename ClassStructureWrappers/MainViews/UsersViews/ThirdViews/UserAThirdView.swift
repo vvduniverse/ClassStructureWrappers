@@ -9,6 +9,8 @@ import SwiftUI
 
 struct UserAThirdView: View {
     
+    @ObservedObject var user: UserA
+    
     @Binding var nextViewIsPresented: Bool
     
     @Binding var name: String
@@ -24,7 +26,9 @@ struct UserAThirdView: View {
             }
             .padding(/*@START_MENU_TOKEN@*/[.top, .trailing]/*@END_MENU_TOKEN@*/)       
             Spacer()
-            Text(" A-line ")
+            Text(" A-line Page 3")
+            Divider()
+            Text("Class user is: \(user.name) and age is: \(user.age)")
             Divider()
             Text("User is: \(name) and age is: \(age)")
             Spacer()
@@ -35,6 +39,6 @@ struct UserAThirdView: View {
 
 struct UserAThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        UserAThirdView(nextViewIsPresented: .constant(true), name: .constant(""), age: .constant(""))
+        UserAThirdView(user: UserA(), nextViewIsPresented: .constant(false), name: .constant(""), age: .constant(""))
     }
 }
