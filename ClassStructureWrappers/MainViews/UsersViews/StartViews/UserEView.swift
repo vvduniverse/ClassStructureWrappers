@@ -9,23 +9,23 @@ import SwiftUI
 
 struct UserEView: View {
     
-    let user = UserE()
+    @ObservedObject var user: UserE
     
     var body: some View {
         VStack {
-            Text(" E-line ")
+            Text(" E-line Page 1")
             Divider()
             Text("Hello Great \(user.user.name) \(user.user.age) years old!!!")
             Text("")
-             NavigationLink(destination: UserESecondView()) {
-                 Text("Next page")
-             }
-         }
+            NavigationLink(destination: UserESecondView(user: user)) {
+                Text("Next page")
+            }
+        }
     }
 }
 
 struct UserEView_Previews: PreviewProvider {
     static var previews: some View {
-        UserEView()
+        UserEView(user: UserE())
     }
 }

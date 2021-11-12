@@ -9,8 +9,7 @@ import SwiftUI
 
 struct UserCSecondView: View {
     
-    @State private var user = UserC()
-//    @Published var user = UserC()
+    @Binding var user: UserC
     
     @State private var name = ""
     @State private var age = ""
@@ -18,7 +17,7 @@ struct UserCSecondView: View {
     
     var body: some View {
         VStack {
-            Text(" C-line ")
+            Text(" C-line Page 2")
             Divider()
             Text("Name: \(user.name), age: \(user.age)")
             Divider()
@@ -27,7 +26,7 @@ struct UserCSecondView: View {
                 TextField("\(user.name)", text: $name)
                 Button("Done") {
                     user.name = name
-//                    name = ""
+                    name = ""
                 }
             }
             HStack {
@@ -36,10 +35,10 @@ struct UserCSecondView: View {
                 Button("Done") {
                     if Int(age) != nil  {
                         user.age = Int(age)!
-//                        age = ""
+                        age = ""
                     } else {
                         user.age = 0
-//                        age = ""
+                        age = ""
                     }
                 }
             }
@@ -47,7 +46,7 @@ struct UserCSecondView: View {
                 nextViewIsPresented = true
             }
             .sheet(isPresented: $nextViewIsPresented) {
-                UserCThirdView(nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
+                UserCThirdView(user: $user, nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
             }
         }.padding()
     }
@@ -55,6 +54,6 @@ struct UserCSecondView: View {
 
 struct UserCSecondView_Previews: PreviewProvider {
     static var previews: some View {
-        UserCSecondView()
+        UserCSecondView(user: .constant(UserC()))
     }
 }

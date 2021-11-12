@@ -9,15 +9,15 @@ import SwiftUI
 
 struct UserDView: View {
     
-    let user = UserD(name: "UserD", isHuman: true, age: 77)
+    @Binding var user: UserD
     
     var body: some View {
         VStack {
-            Text(" D-line ")
+            Text(" D-line Page 1")
             Divider()
             Text("Hello Great \(user.name) \(user.age) years old!!!")
             Text("")
-             NavigationLink(destination: UserDSecondView()) {
+            NavigationLink(destination: UserDSecondView(user: $user)) {
                  Text("Next page")
              }
          }
@@ -26,6 +26,6 @@ struct UserDView: View {
 
 struct UserDView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDView()
+        UserDView(user: .constant(UserD(name: "", isHuman: true, age: 10)))
     }
 }

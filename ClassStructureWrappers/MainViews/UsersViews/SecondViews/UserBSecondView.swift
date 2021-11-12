@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct UserBSecondView: View {
-    
-    //    let user = UserB(name: "UserB2", isHuman: true, age: 55)
+
     @EnvironmentObject var user: UserB
     
     @State private var name = ""

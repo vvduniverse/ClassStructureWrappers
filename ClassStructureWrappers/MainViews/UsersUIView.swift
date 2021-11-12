@@ -10,15 +10,11 @@ import SwiftUI
 struct UsersUIView: View {
     
     @ObservedObject var user: UserA
-//    let user1 = UserA()
-    
-//    let user2 = UserB(name: "UserB0", isHuman: true, age: 29)
-    @EnvironmentObject var user2: UserB
-    
-    let user3 = UserC()
-    let user4 = UserD(name: "UserD0", isHuman: true, age: 55)
-    let user5 = UserE()
-    let user6 = UserF()
+    @EnvironmentObject var user2: UserB    
+    @Binding var user3: UserC
+    @Binding var user4: UserD
+    @ObservedObject var user5: UserE
+    @EnvironmentObject var user6: UserF
     
     var body: some View {
         VStack(spacing: 45) {
@@ -32,19 +28,19 @@ struct UsersUIView: View {
                 Text(user2.isHuman ? "Is human2" : "Not a human")
             }
             HStack {
-                Text("User name is \(user3.name) has lenth  \(user3.nameLenth)")
+                Text("User name is \(user3.name) has lenth  \(user3.age)")
                 Text(user3.isHuman ? "Is human" : "Not a human")
             }
             HStack {
-                Text("User name is \(user4.name) has lenth  \(user4.nameLenth)")
+                Text("User name is \(user4.name) has lenth  \(user4.age)")
                 Text(user4.isHuman ? "Is human" : "Not a human")
             }
             HStack {
-                Text("User name is \(user5.user.name) has lenth  \(user5.user.nameLenth)")
+                Text("User name is \(user5.user.name) has lenth  \(user5.user.age)")
                 Text(user5.user.isHuman ? "Is human" : "Not a human")
             }
             HStack {
-                Text("User name is \(user6.user.name) has lenth  \(user6.user.nameLenth)")
+                Text("User name is \(user6.user.name) has lenth  \(user6.user.age)")
                 Text(user6.user.isHuman ? "Is human" : "Not a human")
             }
         }
@@ -53,6 +49,6 @@ struct UsersUIView: View {
 
 struct UsersUIView_Previews: PreviewProvider {
     static var previews: some View {
-        UsersUIView(user: UserA())
+        UsersUIView(user: UserA(), user3: .constant(UserC()), user4: .constant(UserD(name: "", isHuman: true, age: 22)), user5: UserE())
     }
 }

@@ -9,15 +9,15 @@ import SwiftUI
 
 struct UserCView: View {
     
-    let user = UserC()
+    @Binding var user: UserC
     
     var body: some View {
         VStack {
-            Text(" C-line ")
+            Text(" C-line Page 1")
             Divider()
             Text("Hello Great \(user.name) \(user.age) years old!!!")
             Text("")
-             NavigationLink(destination: UserCSecondView()) {
+            NavigationLink(destination: UserCSecondView(user: $user)) {
                  Text("Next page")
              }
          }
@@ -26,6 +26,6 @@ struct UserCView: View {
 
 struct UserCView_Previews: PreviewProvider {
     static var previews: some View {
-        UserCView()
+        UserCView(user: .constant(UserC()))
     }
 }

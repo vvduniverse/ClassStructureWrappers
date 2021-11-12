@@ -17,7 +17,7 @@ struct UserASecondView: View {
     
     var body: some View {
         VStack {
-            Text(" B-line Page 2")
+            Text(" A-line Page 2")
             Divider()
             Text("Name: \(user.name), age: \(user.age)")
             Divider()

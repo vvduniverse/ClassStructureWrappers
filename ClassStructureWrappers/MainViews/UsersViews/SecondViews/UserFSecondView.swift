@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserFSecondView: View {
     
-    let user = UserF()
+    @EnvironmentObject var user: UserF
     
     @State private var name = ""
     @State private var age = ""
@@ -17,7 +17,7 @@ struct UserFSecondView: View {
     
     var body: some View {
         VStack {
-            Text(" F-line ")
+            Text(" F-line Page 2")
             Divider()
             Text("Name: \(user.user.name), age: \(user.user.age)")
             Divider()
@@ -26,7 +26,7 @@ struct UserFSecondView: View {
                 TextField("\(user.user.name)", text: $name)
                 Button("Done") {
                     user.user.name = name
-//                    name = ""
+                    name = ""
                 }
             }
             HStack {
@@ -35,10 +35,10 @@ struct UserFSecondView: View {
                 Button("Done") {
                     if Int(age) != nil  {
                         user.user.age = Int(age)!
-//                        age = ""
+                        age = ""
                     } else {
                         user.user.age = 0
-//                        age = ""
+                        age = ""
                     }
                 }
             }

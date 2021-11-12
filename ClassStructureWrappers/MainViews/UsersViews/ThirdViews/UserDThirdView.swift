@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct UserDThirdView: View {
+    
+    @Binding var user: UserD
+    
     @Binding var nextViewIsPresented: Bool
     
     @Binding var name: String
@@ -24,7 +27,9 @@ struct UserDThirdView: View {
             }
             .padding(/*@START_MENU_TOKEN@*/[.top, .trailing]/*@END_MENU_TOKEN@*/)
             Spacer()
-            Text(" A-line ")
+            Text("D-line Page 3")
+            Divider()
+            Text("Class user is: \(user.name) and age is: \(user.age)")
             Divider()
             Text("User is: \(name) and age is: \(age)")
             Spacer()
@@ -35,6 +40,6 @@ struct UserDThirdView: View {
 
 struct UserDThirdView_Previews: PreviewProvider {
     static var previews: some View {
-        UserDThirdView(nextViewIsPresented: .constant(true), name: .constant(""), age: .constant(""))
+        UserDThirdView(user: .constant(UserD(name: "", isHuman: true, age: 50)), nextViewIsPresented: .constant(true), name: .constant(""), age: .constant(""))
     }
 }

@@ -13,9 +13,9 @@ class UserA: ObservableObject {
     @Published var isHuman = false
     @Published var age = 34
     
-//    var nameLenth: Int {
-//        name.count
-//    }
+    var nameLenth: Int {
+        name.count
+    }
 }
 // **********************************************
 class UserB: ObservableObject {
@@ -54,7 +54,7 @@ struct UserD {
     }
 }
 // **********************************************
-class UserE {
+class UserE: ObservableObject {
     var user = UserC()
     
     var lentValidation: Bool {
@@ -62,7 +62,7 @@ class UserE {
     }
 }
 // **********************************************
-class UserF {
+class UserF: ObservableObject {
     var user = UserD(name: "userF0", isHuman: false, age: 45)
     
     var lentValidation: Bool {

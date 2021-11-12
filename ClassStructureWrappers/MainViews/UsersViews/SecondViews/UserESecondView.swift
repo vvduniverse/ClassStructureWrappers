@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserESecondView: View {
     
-    var user = UserE()
+    @ObservedObject var user: UserE
     
     @State private var name = ""
     @State private var age = ""
@@ -17,7 +17,7 @@ struct UserESecondView: View {
     
     var body: some View {
         VStack {
-            Text(" E-line ")
+            Text(" E-line Page 2")
             Divider()
             Text("Name: \(user.user.name), age: \(user.user.age)")
             Divider()
@@ -26,7 +26,7 @@ struct UserESecondView: View {
                 TextField("\(user.user.name)", text: $name)
                 Button("Done") {
                     user.user.name = name
-//                    name = ""
+                    name = ""
                 }
             }
             HStack {
@@ -35,10 +35,10 @@ struct UserESecondView: View {
                 Button("Done") {
                     if Int(age) != nil  {
                         user.user.age = Int(age)!
-//                        age = ""
+                        age = ""
                     } else {
                         user.user.age = 0
-//                        age = ""
+                        age = ""
                     }
                 }
             }
@@ -46,7 +46,7 @@ struct UserESecondView: View {
                 nextViewIsPresented = true
             }
             .sheet(isPresented: $nextViewIsPresented) {
-                UserEThirdView(nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
+                UserEThirdView(user: user, nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
             }
         }.padding()
     }
@@ -54,6 +54,6 @@ struct UserESecondView: View {
 
 struct UserESecondView_Previews: PreviewProvider {
     static var previews: some View {
-        UserESecondView()
+        UserESecondView(user: UserE())
     }
 }

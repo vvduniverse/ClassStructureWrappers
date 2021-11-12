@@ -9,18 +9,18 @@ import SwiftUI
 
 struct UserFView: View {
     
-    let user = UserF()
+    @EnvironmentObject var user: UserF
     
     var body: some View {
         VStack {
-            Text(" F-line ")
+            Text(" F-line Page 1")
             Divider()
             Text("Hello Great \(user.user.name) \(user.user.age) years old!!!")
             Text("")
-             NavigationLink(destination: UserFSecondView()) {
-                 Text("Next page")
-             }
-         }
+            NavigationLink(destination: UserFSecondView()) {
+                Text("Next page")
+            }
+        }
     }
 }
 
