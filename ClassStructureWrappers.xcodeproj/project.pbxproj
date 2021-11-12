@@ -26,6 +26,11 @@
 		A0B1FFCC2737D1DE008F92D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0B1FFCB2737D1DE008F92D1 /* Preview Assets.xcassets */; };
 		A0B1FFD32737D1FB008F92D1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1FFD22737D1FB008F92D1 /* Model.swift */; };
 		A0B1FFD52737D6A2008F92D1 /* UsersUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B1FFD42737D6A2008F92D1 /* UsersUIView.swift */; };
+		A0BDE6CF273E7B390050F4F7 /* UserBThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDE6CE273E7B390050F4F7 /* UserBThirdView.swift */; };
+		A0BDE6D1273E7B450050F4F7 /* UserCThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDE6D0273E7B450050F4F7 /* UserCThirdView.swift */; };
+		A0BDE6D3273E7B590050F4F7 /* UserDThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDE6D2273E7B590050F4F7 /* UserDThirdView.swift */; };
+		A0BDE6D5273E7B670050F4F7 /* UserEThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDE6D4273E7B670050F4F7 /* UserEThirdView.swift */; };
+		A0BDE6D7273E7B710050F4F7 /* UserFThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BDE6D6273E7B710050F4F7 /* UserFThirdView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,11 @@
 		A0B1FFCB2737D1DE008F92D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A0B1FFD22737D1FB008F92D1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A0B1FFD42737D6A2008F92D1 /* UsersUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUIView.swift; sourceTree = "<group>"; };
+		A0BDE6CE273E7B390050F4F7 /* UserBThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBThirdView.swift; sourceTree = "<group>"; };
+		A0BDE6D0273E7B450050F4F7 /* UserCThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCThirdView.swift; sourceTree = "<group>"; };
+		A0BDE6D2273E7B590050F4F7 /* UserDThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDThirdView.swift; sourceTree = "<group>"; };
+		A0BDE6D4273E7B670050F4F7 /* UserEThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEThirdView.swift; sourceTree = "<group>"; };
+		A0BDE6D6273E7B710050F4F7 /* UserFThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFThirdView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,19 +85,9 @@
 		A07F11A127397621009FAD59 /* UsersViews */ = {
 			isa = PBXGroup;
 			children = (
-				A07F119527397558009FAD59 /* UserAView.swift */,
-				A09FF87E273A9753003ED9FB /* UserASecondView.swift */,
-				A0815BD8273BC0EC00DE9B81 /* UserAThirdView.swift */,
-				A07F119727397577009FAD59 /* UserBView.swift */,
-				A09FF880273A9967003ED9FB /* UserBSecondView.swift */,
-				A09FF882273A9972003ED9FB /* UserCSecondView.swift */,
-				A09FF884273A9988003ED9FB /* UserDSecondView.swift */,
-				A09FF886273A9993003ED9FB /* UserESecondView.swift */,
-				A09FF888273A999E003ED9FB /* UserFSecondView.swift */,
-				A07F1199273975EE009FAD59 /* UserCView.swift */,
-				A07F119B273975FB009FAD59 /* UserDView.swift */,
-				A07F119D27397607009FAD59 /* UserEView.swift */,
-				A07F119F27397618009FAD59 /* UserFView.swift */,
+				A0BDE6D8273E7B810050F4F7 /* StartViews */,
+				A0BDE6D9273E7B9A0050F4F7 /* SecondViews */,
+				A0BDE6DA273E7BB60050F4F7 /* ThirdViews */,
 			);
 			path = UsersViews;
 			sourceTree = "<group>";
@@ -126,6 +126,45 @@
 				A0B1FFCB2737D1DE008F92D1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0BDE6D8273E7B810050F4F7 /* StartViews */ = {
+			isa = PBXGroup;
+			children = (
+				A07F119527397558009FAD59 /* UserAView.swift */,
+				A07F119727397577009FAD59 /* UserBView.swift */,
+				A07F1199273975EE009FAD59 /* UserCView.swift */,
+				A07F119B273975FB009FAD59 /* UserDView.swift */,
+				A07F119D27397607009FAD59 /* UserEView.swift */,
+				A07F119F27397618009FAD59 /* UserFView.swift */,
+			);
+			path = StartViews;
+			sourceTree = "<group>";
+		};
+		A0BDE6D9273E7B9A0050F4F7 /* SecondViews */ = {
+			isa = PBXGroup;
+			children = (
+				A09FF87E273A9753003ED9FB /* UserASecondView.swift */,
+				A09FF880273A9967003ED9FB /* UserBSecondView.swift */,
+				A09FF882273A9972003ED9FB /* UserCSecondView.swift */,
+				A09FF884273A9988003ED9FB /* UserDSecondView.swift */,
+				A09FF886273A9993003ED9FB /* UserESecondView.swift */,
+				A09FF888273A999E003ED9FB /* UserFSecondView.swift */,
+			);
+			path = SecondViews;
+			sourceTree = "<group>";
+		};
+		A0BDE6DA273E7BB60050F4F7 /* ThirdViews */ = {
+			isa = PBXGroup;
+			children = (
+				A0815BD8273BC0EC00DE9B81 /* UserAThirdView.swift */,
+				A0BDE6CE273E7B390050F4F7 /* UserBThirdView.swift */,
+				A0BDE6D0273E7B450050F4F7 /* UserCThirdView.swift */,
+				A0BDE6D2273E7B590050F4F7 /* UserDThirdView.swift */,
+				A0BDE6D4273E7B670050F4F7 /* UserEThirdView.swift */,
+				A0BDE6D6273E7B710050F4F7 /* UserFThirdView.swift */,
+			);
+			path = ThirdViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BDE6D7273E7B710050F4F7 /* UserFThirdView.swift in Sources */,
 				A07F119C273975FB009FAD59 /* UserDView.swift in Sources */,
 				A0B1FFD32737D1FB008F92D1 /* Model.swift in Sources */,
 				A07F11A027397618009FAD59 /* UserFView.swift in Sources */,
@@ -208,10 +248,14 @@
 				A09FF87F273A9753003ED9FB /* UserASecondView.swift in Sources */,
 				A07F119E27397608009FAD59 /* UserEView.swift in Sources */,
 				A0B1FFC52737D1DD008F92D1 /* ClassStructureWrappersApp.swift in Sources */,
+				A0BDE6D5273E7B670050F4F7 /* UserEThirdView.swift in Sources */,
+				A0BDE6CF273E7B390050F4F7 /* UserBThirdView.swift in Sources */,
 				A0B1FFD52737D6A2008F92D1 /* UsersUIView.swift in Sources */,
+				A0BDE6D3273E7B590050F4F7 /* UserDThirdView.swift in Sources */,
 				A07F119827397577009FAD59 /* UserBView.swift in Sources */,
 				A07F119627397558009FAD59 /* UserAView.swift in Sources */,
 				A09FF889273A999E003ED9FB /* UserFSecondView.swift in Sources */,
+				A0BDE6D1273E7B450050F4F7 /* UserCThirdView.swift in Sources */,
 				A09FF885273A9988003ED9FB /* UserDSecondView.swift in Sources */,
 				A07F119A273975EE009FAD59 /* UserCView.swift in Sources */,
 				A09FF887273A9993003ED9FB /* UserESecondView.swift in Sources */,

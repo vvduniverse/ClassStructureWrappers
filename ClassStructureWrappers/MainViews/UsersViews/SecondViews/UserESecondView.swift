@@ -1,5 +1,5 @@
 //
-//  UserCSecondView.swift
+//  UserESecondView.swift
 //  ClassStructureWrappers
 //
 //  Created by Vahtee Boo on 09.11.2021.
@@ -7,45 +7,51 @@
 
 import SwiftUI
 
-struct UserCSecondView: View {
+struct UserESecondView: View {
     
-    @State private var user = UserC()
-//    @Published var user = UserC()
+    var user = UserE()
     
     @State private var name = ""
     @State private var age = ""
+    @State private var nextViewIsPresented = false
     
     var body: some View {
         VStack {
-            Text(" C-line ")
+            Text(" E-line ")
             Divider()
             HStack {
                 Text("Enter you name, plz.")
-                TextField("\(user.name)", text: $name)
+                TextField("\(user.user.name)", text: $name)
                 Button("Done") {
-                    user.name = name
+                    user.user.name = name
                     name = ""
                 }
             }
             HStack {
                 Text("Enter you age, plz.")
-                TextField("\(user.age)", text: $age)
+                TextField("\(user.user.age)", text: $age)
                 Button("Done") {
                     if Int(age) != nil  {
-                        user.age = Int(age)!
+                        user.user.age = Int(age)!
                         age = ""
                     } else {
-                        user.age = 0
+                        user.user.age = 0
                         age = ""
                     }
                 }
+            }
+            Button("NEXT") {
+                nextViewIsPresented = true
+            }
+            .sheet(isPresented: $nextViewIsPresented) {
+                UserEThirdView(nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
             }
         }.padding()
     }
 }
 
-struct UserCSecondView_Previews: PreviewProvider {
+struct UserESecondView_Previews: PreviewProvider {
     static var previews: some View {
-        UserCSecondView()
+        UserESecondView()
     }
 }

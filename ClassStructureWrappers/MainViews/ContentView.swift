@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            
+        NavigationView {     
             VStack(spacing: 35) {
                     NavigationLink(destination: UsersUIView()) { Text("All the users") }
                     NavigationLink(destination: UserAView()) { Text("NEXT A") }

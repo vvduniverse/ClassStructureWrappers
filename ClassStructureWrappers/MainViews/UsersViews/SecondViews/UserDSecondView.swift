@@ -1,5 +1,5 @@
 //
-//  UserBSecondView.swift
+//  UserDSecondView.swift
 //  ClassStructureWrappers
 //
 //  Created by Vahtee Boo on 09.11.2021.
@@ -7,16 +7,17 @@
 
 import SwiftUI
 
-struct UserBSecondView: View {
+struct UserDSecondView: View {
     
-    let user = UserB(name: "UserB2", isHuman: true, age: 55)
+    @State private var user = UserD(name: "UserD2", isHuman: true, age: 30)
     
     @State private var name = ""
     @State private var age = ""
+    @State private var nextViewIsPresented = false
     
     var body: some View {
         VStack {
-            Text(" B-line ")
+            Text(" D-line ")
             Divider()
             HStack {
                 Text("Enter you name, plz.")
@@ -39,12 +40,18 @@ struct UserBSecondView: View {
                     }
                 }
             }
+            Button("NEXT") {
+                nextViewIsPresented = true
+            }
+            .sheet(isPresented: $nextViewIsPresented) {
+                UserDThirdView(nextViewIsPresented: $nextViewIsPresented, name: $name, age: $age)
+            }
         }.padding()
     }
 }
 
-struct UserBSecondView_Previews: PreviewProvider {
+struct UserDSecondView_Previews: PreviewProvider {
     static var previews: some View {
-        UserBSecondView()
+        UserDSecondView()
     }
 }
